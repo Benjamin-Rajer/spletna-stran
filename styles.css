@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    display: flex; /* flexbox */
+    display: flex; /* flexbox - za fleksibilnejše gumbe itd. */
     justify-content: center; /* horizontal alignment */
     align-items: center; /* vertical alignment*/
     height: 100vh; /* viewport height v procentih - višina vidnega dela spletne strani */
@@ -8,30 +8,37 @@ body {
     background-color: rgb(201, 117, 7);
 
     border-radius: 20px;
+    box-sizing: border-box;
+
   
 }
 
 #calculator { /* to je za celoten kalkulator, vse skupaj*/
+
     font-family: Helvetica, sans-serif;
     background-color: black;
-    border: 50px solid;
-    border-radius: 20px;
+    border: 5vh solid;
+    border-radius: 2vh;
     border-color: rgba(255, 255, 255, 0.8);
 
 
     max-width: 500px; /* to zoža kalkulator da so gumbi skupaj */
+    max-height: 80vh;
     overflow: hidden;
+
+    aspect-ratio: 3/5;
+    width: auto;
 }
 
 #display {
     box-sizing: border-box; /* da je rob vključen v širino, sicer na desni izgine */
     width: 100%;
-    padding: 20px;
+    padding: 2vh;
     font-size: 5rem;
     text-align: left;
 
 
-    border: 20px solid;
+    border: 2vh solid;
     border-color: rgb(128, 128, 128);
     background-color: rgba(0, 236, 255, 0.8);
     color: white;
@@ -41,22 +48,27 @@ body {
 #keys { /* Za postavitev kalkulatorja */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 25px;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1vh;
+    padding: 2vh;
+
+    height: 65%;
 }
 
 button {
-    width: 100px;
-    height: 100px;
-    margin: 2px;
+    width: 100%;
+    height: 100%;
+
     border-radius: 25px;
     border: none;
 
     background-color: #0240a3;
 
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vh, 3rem);
     font-weight: bold;
     color: white;
+    justify-content: center;
+    align-items: center;
 
     cursor: pointer;
 }
