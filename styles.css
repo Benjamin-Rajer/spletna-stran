@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    display: flex; /* flexbox */
+    justify-content: center; /* horizontal alignment */
+    align-items: center; /* vertical alignment*/
+    height: 100vh; /* viewport height v procentih - višina vidnega dela spletne strani */
+
+    background-color: rgb(201, 117, 7);
+
+    border-radius: 20px;
+  
+}
+
+#calculator { /* to je za celoten kalkulator, vse skupaj*/
+    font-family: Helvetica, sans-serif;
+    background-color: black;
+    border: 50px solid;
+    border-radius: 20px;
+    border-color: rgba(255, 255, 255, 0.8);
+
+
+    max-width: 500px; /* to zoža kalkulator da so gumbi skupaj */
+    overflow: hidden;
+}
+
+#display {
+    box-sizing: border-box; /* da je rob vključen v širino, sicer na desni izgine */
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+
+
+    border: 20px solid;
+    border-color: rgb(128, 128, 128);
+    background-color: rgba(0, 236, 255, 0.8);
+    color: white;
+
+}
+
+#keys { /* Za postavitev kalkulatorja */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    border-radius: 25px;
+    border: none;
+
+    background-color: #0240a3;
+
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+
+    cursor: pointer;
+}
+/* pseudoclasses se uporabljajo za stiliziranje elementov glede na stanje */
+button:hover{ /* ko gremo čez element */
+    background-color: #2667cf;
+}
+
+button:active { /* ko kliknemo element*/
+    background-color: #448bff;
+}
